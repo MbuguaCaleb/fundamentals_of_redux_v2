@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**State Management With Redux**
+```
+Redux is a state management tool that we can use in our projects
 
-## Available Scripts
+We can use it in react and also theoritically in other frameworks as well.
 
-In the project directory, you can run:
+```
+**PreparedNess**
 
-### `npm start`
+```
+(a)There is a lot of boiler plates in your project when it comes to redux but once you master the flow all goes well.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+(b)There is dispatch,match state to props,actions,reducers.
+```
+**Advantage**
+```
+The biggest advantage is that in large applications using of state managers is of great benefit.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Redux is the most popular state Management tool with React.
 
-### `npm test`
+```
+**Concept of Redux**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+The concept of redux is to entirely separate the state from being tied to one particular component and placing it such that it may be accessed universally by all components.
 
-### `npm run build`
+One of the challages of react is that it is one way->data being progresssively rendered to the related components .
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+What about if you need to access the state from an unrelated component??
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This is wwhere application level state and state managers come in.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+                     APP
+                      |
+                      |
+[ SEARCH<----------MOVIE LIST-------->LOG IN    
+                      |
+                      |
+                     MOVIE
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Data in Redux is therefore completely separated from the components and you may pull it to the component tht needs the state.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+It reduces the progressive passing of data via props which is very much handy when it comes to the Large Projects.
 
-## Learn More
+```
+```
+Notes by Mbugua Caleb
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+```
+tutor -Dev Ed
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
