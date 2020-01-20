@@ -215,6 +215,49 @@ Everything that the action initends to do is implemented in the reducer.
 
 ```
 
+**COMPLETION SUMMARY**
+
+```
+Every component therefore has access to the dispach and the actions.
+
+and thus an effect to the state.
+
+You therefore may always write all your reducer functions separately and executing them to components by dispatching actions into them.
+
+This is excideenlgly awesome and this is the concept of redux.
+
+upon dispactch it therefore has an effect to the reducer an thus the store and thus the state.
+
+
+```
+
+**REDUX IMPLEMENTED COMPONENT**
+
+```
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { increment, decrement } from "./actions";
+
+function App() {
+  const counter = useSelector(state => state.counter);
+  const isLogged = useSelector(state => state.isLogged);
+  const dispatch = useDispatch();
+
+  return (
+    <div className='App'>
+      <h1>Counter {counter}</h1>
+      <button onClick={() => dispatch(increment(5))}>+</button>
+      <button onClick={() => dispatch(decrement())}>-</button>
+      {isLogged ? <h3>Valuable information I shouldn't see</h3> : ""}
+    </div>
+  );
+}
+
+export default App;
+
+
+```
+
 ```
 Notes by Mbugua Caleb
 
