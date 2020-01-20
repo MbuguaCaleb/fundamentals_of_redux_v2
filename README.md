@@ -79,23 +79,64 @@ The reducer checks which action you did and based on the action it modifies the 
 
 ```
 
-```
-(a)Store takes in one parameter which is the store
+**SETTING UP**
 
-```
-
-```
-Notes by Mbugua Caleb
-
-```
-
-
-**SETTING UP
 ```
 (a)Implementing store index.js
 
 (b)creating separate folders for actions and reducers.
 
+(c)Remeber that reducers are hooked into the store.store is the representation of your state.
+
+(d)When you have mutiple reducers you use combine reducer then hook them into the store.
+
+(e)After implementing redux and combining reducers it is hooked to react via react-redux.
+
+This is done by the Provider which combines the store(entire state to the app)
+
+Thus when you run redux any component has got acess to the global state.
+
+```
+
+**ACESSING GLOBAL STATE FROM YOUR COMPONENTS**
+
+```
+We use the useSelector from react-redux which has the ability to be imported into any of our components.
+
+import React from "react";
+import { useSelector } from "react-redux";
+
+function App() {
+  const counter = useSelector(state => state.counter);
+  return (
+    <div className='App'>
+      <h1>Counter {counter}</h1>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+```
+
+**Adding Redux dev tools Chrome Extension**
+
+```
+It is hooked in the store as follows:
+
+const myStore = createStore(
+  allReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+It therefore has got access to all the state.
+
+```
+
+```
+Notes by Mbugua Caleb
 
 ```
 
