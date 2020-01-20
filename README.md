@@ -89,6 +89,16 @@ Notes by Mbugua Caleb
 
 ```
 
+
+**SETTING UP
+```
+(a)Implementing store index.js
+
+(b)creating separate folders for actions and reducers.
+
+
+```
+
 ```
 tutor -Dev Ed
 
