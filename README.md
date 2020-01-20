@@ -135,6 +135,86 @@ It therefore has got access to all the state.
 
 ```
 
+**TO REMEMBER**
+
+```
+(a)Remeber that action is just a description that is passed to the reducer and then the reducer acts accordingly after it is dispatched.
+
+(b)A reducer takes in state as one of its parameters.
+
+(c)JavaScript detects index.js by default incase it is the only  file in the folder.
+
+
+```
+
+**Note**
+
+```
+An action can take a parameter
+
+(a)<button onClick={() => dispatch(increment(5))}>+</button>
+
+
+(b) Action itself
+
+
+(i)INITIAL BEFORE PARAM
+
+export const decrement = () => {
+  return {
+    type: "DECREMENT"
+  };
+};
+
+
+(ii)AFTER PARAM
+export const increment = nr => {
+  return {
+    type: "INCREMENT",
+    payload: nr
+  };
+};
+
+
+
+
+(c)The reducer also does change because of this.
+
+
+INITIAL REDCUER STATE
+const counterReducer = (state = 0, action) => {
+  switch (action.type) {
+    case "INCREMENT":
+      return state + 1;
+    case "DECREMENT":
+      return state - 1;
+    default:
+      // need this for default case
+      return state;
+  }
+};
+
+FINAL REDCUER STATE
+
+
+const counterReducer = (state = 0, action) => {
+  switch (action.type) {
+    case "INCREMENT":
+      return state + action.payload;
+    case "DECREMENT":
+      return state - 1;
+    default:
+      // need this for default case
+      return state;
+  }
+};
+
+
+Everything that the action initends to do is implemented in the reducer.
+
+
+```
+
 ```
 Notes by Mbugua Caleb
 
